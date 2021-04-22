@@ -1,0 +1,84 @@
+mat-form-field{
+  width: 100%;
+
+}
+.ragister-not-yet mat-card-title{
+    text-align: center;
+    padding: 1rem;
+    color: green;
+}
+.main-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+mat-card-title{
+  color:#3F51B5;
+  font: Arial,sans-serif;
+  font-size: 20px;
+
+}
+.center {
+  text-align: center;
+  margin-top: 2.5rem;
+  color: blue;
+}
+mat-card-actions.center a{
+  margin-left: 2rem;
+  text-decoration: none;
+  color: green;
+  outline: none;
+}
+mat-card-actions.center a:hover{
+  
+  background-color: #3f51b5;
+  color: aliceblue;
+  transition: 0.3s;
+}
+
+
+
+  /* this is the mobile  view */
+  @media only screen and (max-width:600px){
+    .child_div{
+    position: relative;
+    top: 65px;
+    bottom: 0;
+    margin-bottom: 18%;
+    }
+    .col-6{
+      width: 87vw;
+    }
+}
+
+/* this is the tablete view */
+@media only screen and (min-width:720px){
+  .child_div{
+    position: relative;
+    top: 150px;
+    bottom: 0;
+    margin-bottom: 21.5%;
+    width: 90%;
+    left: 5%;
+
+    }
+    
+    .col-6{
+      width: 90vw;
+    }
+}
+
+
+/* this is the laptop view */
+@media only screen and (min-width:992px){
+  .child_div{
+    position: relative;
+    top: 80px;
+    bottom: 0;
+    margin-bottom: 7.5%;
+    }
+    .col-6{
+      width: 40vw;
+    }
+}

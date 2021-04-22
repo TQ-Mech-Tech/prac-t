@@ -1,0 +1,70 @@
+<div class="parent_div">
+  <div class="child_div">
+
+    <div>
+      <div class="main-div">
+      
+        <mat-card>
+          <!-- title of the card -->
+            <div class="ragister-not-yet">
+               <mat-card-title> Not Ragister Yet ?</mat-card-title>
+            </div>
+            <div class="ragister-not-yet">
+               <mat-card-title style="font-size: 16px;">Sign Up</mat-card-title>
+            </div>
+      
+      <form>
+        <!-- Username -->
+        <div>
+          <mat-form-field class="col-6" >
+            <input matInput type="text" placeholder="Username">
+            <mat-error *ngIf="">please enter your username</mat-error>
+          </mat-form-field>
+        </div>
+
+          <!-- enter your email -->
+          <div>
+            <mat-form-field class="col-6">
+              <input matInput type="text" placeholder="enter your email">
+              <mat-error *ngIf="">please enter email</mat-error>
+            </mat-form-field>
+          </div>
+          
+      
+          <!-- enter your mobile -->
+          <div>
+            <mat-form-field class="col-6">
+              <input matInput type="text" placeholder="enter your mobile">
+              <mat-error *ngIf="">please enter your mobile</mat-error>
+            </mat-form-field>
+          </div>
+          
+      
+          <!-- enter your password -->
+          <div>
+            <mat-form-field class="col-6" appearance="fill">
+              <mat-label>enter your password</mat-label>
+                 <input matInput [type]="hide ? 'password' : 'text'">
+                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                 </button>
+            </mat-form-field>
+          </div>
+      
+           <!-- sign up button -->
+          <button fxFlexFill mat-raised-button color="primary" type="submit" >Sign Up</button>
+         
+          <!-- Log In Now button -->
+          <mat-card-actions class="center" >
+             <span>Already Registered ?</span> <span style="font-size: 20px; margin-left: 20px;">|</span>
+              <a mat-button  color="accent" matTooltip="LogIn" routerLink="/login"> Log In Now </a>
+            </mat-card-actions>
+      </form>
+      
+        </mat-card>
+      
+        </div>
+      </div>
+      
+  </div>
+</div>

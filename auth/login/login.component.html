@@ -1,0 +1,44 @@
+
+<div class="parent_div">
+  <div class="child_div">
+    <div class="main-div">
+
+              <mat-card>
+
+                        <!-- title of the page -->
+                        <div style="text-align: center;">
+                            <mat-card-title> Log In</mat-card-title>
+                        </div>
+              
+                  <form [formGroup]="validationOnLogin" >
+                        <!-- Email is here -->
+                        <div>
+                          <mat-form-field class="col-6">
+                            <input formControlName="email" matInput type="email" placeholder="E-Mail">
+                            <mat-error *ngIf="!validationOnLogin.get('email').valid && validationOnLogin.get('email').touched">Please enter a valid email</mat-error>
+                            </mat-form-field>
+                        </div>
+                        
+
+                        <!-- Password is here -->
+                        <div>
+                          <mat-form-field>
+                            <input  formControlName="password" type="password" matInput placeholder="Password">
+                            <mat-error *ngIf="!validationOnLogin.get('password').valid && validationOnLogin.get('password').touched">Please enter a valid password</mat-error>
+                            </mat-form-field>
+                        </div>
+                       
+
+                        <!-- login is here -->
+                        <button fxFlexFill mat-raised-button color="primary" type="submit" > Login</button>
+
+                        <!-- forget password page is here -->
+                        <mat-card-actions class="center" >
+                        <a mat-button  matTooltip="Forget Password" routerLink="/forget-password">Forget Password ? </a> <span style="font-size: larger; padding: 0 3px;">|</span> 
+                        <a mat-button matTooltip="Register Now" routerLink="/signup">Sign Up</a>
+                        </mat-card-actions>
+                  </form>
+              </mat-card>
+    </div>  
+  </div>
+</div>
